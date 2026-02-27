@@ -7,21 +7,27 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
     	// Dentro do main...// Fabriquei a primeira (Instância 1)
-		Martelo meuMartelo = new Martelo();
+		Martelo meuMartelo = new Martelo(null, null);
     	meuMartelo.modelo = "Bola";
     	meuMartelo.material = "Borracha";
     	meuMartelo.peso = 1.00;
+    	
     	// Fabriquei a segunda (Instância 2)
-		Martelo marteloDoProfessor = new Martelo();
+		Martelo marteloDoProfessor = new Martelo(null, null);
     	marteloDoProfessor.modelo = "Unha";
     	marteloDoProfessor.material = "Alumínio";
     	marteloDoProfessor.peso = 1.50;
+    	
     	System.out.println("Meu martelo é de: " + meuMartelo.material);
     	System.out.println("Modelo do meu martelo: " + meuMartelo.modelo);
     	System.out.println("Peso do meu martelo: " + meuMartelo.peso);
+    	meuMartelo.tirarPrego(meuMartelo.modelo);
+    	meuMartelo.desempenarVidro(meuMartelo.material);
     	System.out.println();
     	System.out.println("O do professor é de: " + marteloDoProfessor.material);
     	System.out.println("Modelo do Professor: " + marteloDoProfessor.modelo);
     	System.out.println("Peso do martelo do professor: " + marteloDoProfessor.peso);
+    	marteloDoProfessor.tirarPrego(marteloDoProfessor.modelo);
+    	marteloDoProfessor.desempenarVidro(marteloDoProfessor.material);
     }
 }
